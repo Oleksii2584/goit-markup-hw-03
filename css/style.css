@@ -96,10 +96,11 @@ color: var(--main-color);}
   font-size: 44px;
   line-height:1.36;
   color: var(--white-color);
-  max-width: 696px;
+  max-width: 693px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+  letter-spacing: 0.06em;
 }
 
 .hero-button{
