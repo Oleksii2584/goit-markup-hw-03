@@ -37,18 +37,43 @@ color: var(--main-color);
 font-family: 'Raleway';
 font-weight: 700;
 font-size: 26px;
-line-height: 1.19;}
+line-height: 1.19;
+margin-right: 93px;}
 .logo-studio{
 color: #000000;
 }
 
                             /* header */
-
+.head-block{
+padding-top: 25px;
+padding-bottom: 25px;
+border-bottom: 1px solid #ECECEC;
+}
 .container {
   width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
+.page-header-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.page-nav{
+  display: flex;
+  align-items: center;
+}
+.page-head-menu{
+  display: flex;
+  align-items: center;
+}
+.page-head-list:not(:last-child){
+margin-right: 50px;
+}
+
 .container-nav{
 }
 .head-contact{ color: var(--secondary-color);}
@@ -59,13 +84,23 @@ color: var(--main-color);}
                         /* Главный банер */
               /* main */
 
-.hero{ background-color: #2F303A;}
+.hero{ 
+  background-color: #2F303A;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .hero-title{text-transform: uppercase;
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height:1.36;
   color: var(--white-color);
+  max-width: 696px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .hero-button{
@@ -77,10 +112,19 @@ color: var(--main-color);}
   color: var(--white-color);
   background: var(--main-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 32px;
 }
 .hero-button:hover{background-color: #188CE8;}
             /* Ключевые моменты */
+.key-block{display: flex;
+  justify-content: space-between;
+  margin: 94px 0;
+}
+.key-list:not(:last-child){
+margin-right: 30px;}
+
 .visually-hidden {
 position: absolute;
 width: 1px;
@@ -98,15 +142,18 @@ border: 0;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-transform: uppercase;}
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
 .key-points-p{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.9;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
+  
   }
              /* Чем мы занимаемся */
 .work{
@@ -116,6 +163,14 @@ border: 0;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.work-list{
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+margin-bottom: 145px;
+
 }
               /* Наша команда */
 .team{
@@ -125,11 +180,24 @@ border: 0;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 94px;
+  margin-bottom: 50px;
 }
 .team-div{background-color: var(--top-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.team-list{
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+margin-bottom: 43px;
 }
 .team-block{
-background-color: var(--white-color);}
+background-color: var(--white-color);
+flex-basis: calc((100% - 90px) / 4);
+}
 
 .team-title{
   font-style: normal;
@@ -138,6 +206,8 @@ background-color: var(--white-color);}
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-p{
   font-style: normal;
@@ -147,19 +217,27 @@ background-color: var(--white-color);}
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
+  margin-bottom: 30px;
 }
 /*============== footer=========== */
 footer{
   background-color: #2F303A;
+  
 }
+.footer-block{
+  display: flex;
+  flex-direction: column;
+ }
+
 .logo-footer{color: var(--main-color);
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-margin-left: 215px;
-margin-top: 60px;}
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
 .logo-footer-studio{
   font-family: 'Raleway';
 font-style: normal;
@@ -169,6 +247,11 @@ line-height: 1.19;
 letter-spacing: 0.03em;
 color: var(--white-color);
 }
+.address-block{
+margin-bottom: 60px;
+}
+.footer-list{
+margin-bottom: 9px;}
 .address-footer{font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -184,27 +267,57 @@ color: var(--white-color);
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
-  address{margin-left: 215px;
-  }
+ 
 
 
   /* =========================portfolio ===============*/
-
+.portfolio{
+  margin-top: 94px;
+  margin-bottom: 94px;
+  
+}
+.menu-portfolio{
+display: flex;
+justify-content: center;
+margin-bottom: 34px;
+}
+.portfolio-list:not(:last-child){
+  margin-right: 30px;}
   .navigate.current{ color:var(--main-color);
   }
   .button-portfolio.current{ color: var(--white-color);
     background-color:var(--main-color);
   }
   
-  .button-portfolio{font-style: inherit;
+  .button-portfolio{
+    font-style: inherit;
     font-weight: 500;
     font-size: 16px;
-    
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--accent-color);
     background-color: var(--top-color);
+    
+    border-radius: 4px;
+    border: none;
+    padding: 6px 22px;
   }
+  .menu-main{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 30px;
+  }
+  .main-list{
+   
+  } 
+  .main-text{
+  margin-left: 24px;
+  margin-top: 20px;
+  }
+  
+  
+  
   .porfolio-title{
     font-style: normal;
     font-weight: 700;
