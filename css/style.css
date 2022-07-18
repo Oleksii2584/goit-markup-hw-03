@@ -87,10 +87,8 @@ color: var(--main-color);}
 .hero{ 
   background-color: #2F303A;
   height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 200px 0;
+  text-align: center;
 }
 .hero-title{text-transform: uppercase;
   font-style: normal;
@@ -99,8 +97,9 @@ color: var(--main-color);}
   line-height:1.36;
   color: var(--white-color);
   max-width: 696px;
-  text-align: center;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-button{
